@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #0d0d0d;
+  color: white;
+  overflow-x: hidden;
+}
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 8%;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: 3px;
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff3c00;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=1400&auto=format&fit=crop');
+
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero-content {
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 80px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  letter-spacing: 4px;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #d6d6d6;
+  margin-bottom: 40px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 15px 35px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.primary-btn {
+  background: #ff3c00;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #ff5c2b;
+  transform: translateY(-4px);
+}
+
+.secondary-btn {
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary-btn:hover {
+  background: white;
+  color: black;
+}
+
+/* Sections */
+section {
+  padding: 100px 8%;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.section-title h2 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  color: #bbbbbb;
+}
+
+/* Cars */
+.cars-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.car-card {
+  background: #161616;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: 0.4s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.car-card:hover {
+  transform: translateY(-10px);
+}
+
+.car-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.car-info {
+  padding: 25px;
+}
+
+.car-info h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.car-info p {
+  color: #cccccc;
+  margin-bottom: 15px;
+}
+
+.car-info span {
+  color: #ff3c00;
+  font-weight: 700;
+  font-size: 22px;
+}
+
+/* Technology */
+.technology-section {
+  background: #111111;
+}
+
+.tech-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 50px;
+  align-items: center;
+}
+
+.tech-text h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.tech-text p {
+  color: #cccccc;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.tech-text ul {
+  list-style: none;
+}
+
+.tech-text li {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.tech-image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/* About */
+.about-section {
+  text-align: center;
+}
+
+.about-section p {
+  max-width: 900px;
+  margin: auto;
+  color: #cccccc;
+  line-height: 1.9;
+  font-size: 18px;
+}
+
+/* Footer */
+footer {
+  background: black;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+footer h3 {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+footer p {
+  color: #bbbbbb;
+  margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .section-title h2 {
+    font-size: 36px;
+  }
+
+  .tech-text h2 {
+    font-size: 36px;
+  }
+}
+```
